@@ -1,22 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { InicioScreen } from './src/components/screens/InicioScreen';
+import { LoginScreen } from './src/screens/loginScreen';
 
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      {/* <Text>K pazaaaaaaa ijos del piko</Text>
-      <StatusBar style="auto" /> */}
-      <InicioScreen/>
+    <View style={styles.containerlogin}>
+      <LoginScreen/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  containerlogin: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#D6D5C9',
     alignItems: 'center',
     justifyContent: 'center',
   },
