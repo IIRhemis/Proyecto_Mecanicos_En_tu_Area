@@ -5,6 +5,7 @@ import { ContainerExample } from './src/screens/ScreenPrincipal';
 export default function App() {
   return (
     <View style={styles.container}>
+      <Text>1 of 1</Text>
       <ContainerExample/>
       <StatusBar style="auto"/>
     </View>
