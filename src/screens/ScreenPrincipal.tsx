@@ -11,7 +11,7 @@ export function ContainerExample () {
             <Container>
                 <Row>
                     <Col>
-                    <Text>1 of 1</Text>
+            <Text>1 of 1</Text>
                     </Col>
                 </Row>
             </Container>
