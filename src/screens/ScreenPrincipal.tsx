@@ -1,20 +1,37 @@
+import { StatusBar } from "expo-status-bar";
+import CSS from 'csstype';
 import React from 'react';
-import Image from 'react-bootstrap/Image';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, Button} from 'react-native';
 
-export function ContainerExample () {
+function ContainerExample(){
+    const handleClick = () => {
+        // Add code to handle the click event here
+    };
+    
     return (
-        <View style={styles.container}>
-            <Text>1 of 1</Text>
+        <View>
+            <Image
+                style={{ width: 350, height: 200, marginBottom: 15 }}
+                source={require("./assets/mecanico1.png")}
+            />
+            <Button style={styles.button} onClick={handleClick} title="Ver Mecanicos"></Button>
+            <Button onClick={handleClick} title="Hacer Consulta"></Button>
+            <Button onClick={handleClick} title="¿Estás solo? Encuentra Mecánicos en tu área!"></Button>
         </View>
     );
 }
 
+export default ContainerExample;
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    button: {
+        backgroundColor: 'red',
+        fontSize: 24,
+        padding: 10,
     },
 });
