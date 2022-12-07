@@ -8,104 +8,103 @@ export const DescripcionDemecanicosScreen = () => {
   
   return (
     
-    <View style={styles.container}>
-
-
-      <View style={styles.container_caja_texto_up}>
-        <Text>
-          probando
-        </Text>
+    <View style={styles.fondo}>
+      <View style={styles.boton_container}>
+        <Button
+          color={'#C43331'}
+          title='------------'
+          onPress={()=>Alert.alert('deberia volver')}
+        />
       </View>
+      <View style={styles.container}>
+        <View style={styles.caja_texto}>
+          <Text>
+            probando
+          </Text>
+        </View>
 
-      <View style={styles.container_caja_texto_center}>
-        <Text>
-          probando
-        </Text>
+        <View style={styles.boton}>
+          <Button
+            color={'#A22C29'}
+            title='ver en mapa'
+            onPress={()=>Alert.alert('deberia ir a mapa')}
+            />
+        </View>
+
+        <View style={styles.caja_texto}>
+          <Text>
+            probando
+          </Text>
+        </View>
+
+        <View style={styles.caja_texto}>
+          <Text>
+            probando
+          </Text>
+        </View>
+
+        <View style={styles.caja_texto}>
+          <Text>
+            probando
+          </Text>
+        </View>
+
+        <View style={styles.caja_texto}>
+          <Text>
+            probando
+          </Text>
+        </View>
+
+        <View style={styles.caja_texto}>
+          <Text>
+            probando
+          </Text>
+        </View>
+
+
       </View>
-
-      <View style={styles.container_caja_texto_center}>
-        <Text>
-          probando
-        </Text>
-      </View>
-
-      <View style={styles.container_caja_texto_center}>
-        <Text>
-          probando
-        </Text>
-      </View>
-
-      <View style={styles.container_caja_texto_center}>
-        <Text>
-          probando
-        </Text>
-      </View>
-
-      <View style={styles.container_caja_texto_down}>
-        <Text>
-          probando
-        </Text>
-      </View>
-
-
     </View>
     
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
+  fondo: {
     position: 'absolute',
     backgroundColor: '#D6D5C9',
-
     width: 500,
     height: 1000,
   },
-  container_caja_texto_up: {
-    position: 'relative',
-    width: 350,
-    height: 100,
-    borderWidth: 1.5,
-    borderRadius: 10,
-    borderColor: '#0A100D',
-    backgroundColor: '#B9BAA3',
-    textAlign: 'center',
+  container: {
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginTop: 'auto',
-    marginBottom: 10,
-    color: '#0A100D',
   },
-  container_caja_texto_center: {
-    position: 'relative',
-    width: 350,
+  caja_texto: {
+    padding: 10,
+    width: 270,
     height: 100,
     borderWidth: 1.5,
     borderRadius: 10,
     borderColor: '#0A100D',
     backgroundColor: '#B9BAA3',
+    color: '#0A100D',
     textAlign: 'center',
-    marginLeft: 'auto',
-    marginRight: 'auto',
     marginTop: 10,
-    marginBottom: 10,
-    color: '#0A100D',
+
   },
-  container_caja_texto_down: {
-    position: 'relative',
-    width: 350,
-    height: 100,
-    borderWidth: 1.5,
+  boton:{
+    marginVertical:10,
+    width: 150,
     borderRadius: 10,
-    borderColor: '#0A100D',
-    backgroundColor: '#B9BAA3',
-    textAlign: 'center',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    marginTop: 10,
-    marginBottom: 'auto',
-    color: '#0A100D',
   },
-  
+  boton_container:{
+    width: 60,
+    borderRadius: 10,
+    paddingTop: 150,
+    paddingLeft: 10,
+    marginLeft:50,
+
+  },
+
 });
 
