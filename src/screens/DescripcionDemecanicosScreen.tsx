@@ -1,66 +1,45 @@
+import { setStatusBarBackgroundColor } from 'expo-status-bar';
 import React from 'react'
-import { StyleSheet,Text,View,Image,Button,Alert } from "react-native";
+import { StyleSheet,Text,View,Image,Button,Alert, Touchable, TouchableOpacity } from "react-native";
+
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 
+const image_menu = require('../assets/Atras-negro.png');
 
 export const DescripcionDemecanicosScreen = () => {
   
   return (
     
     <View style={styles.fondo}>
-      <View style={styles.boton_container}>
-        <Button
-          color={'#C43331'}
-          title='------------'
-          onPress={()=>Alert.alert('deberia volver')}
-        />
-      </View>
-      <View style={styles.container}>
-        <View style={styles.caja_texto}>
-          <Text>
-            probando
-          </Text>
-        </View>
 
-        <View style={styles.boton}>
-          <Button
-            color={'#A22C29'}
-            title='ver en mapa'
-            onPress={()=>Alert.alert('deberia ir a mapa')}
-            />
-        </View>
+        <TouchableOpacity
+          style={{
+            ...styles.boton_menu,
+          }}
+          >
+          <Image
+          source={image_menu}
+          style={styles.boton_imagen}/>
+        </TouchableOpacity>
+      <View>
 
-        <View style={styles.caja_texto}>
-          <Text>
-            probando
-          </Text>
+        <View style={styles.container}>
+          <View style={styles.caja_texto}>
+            <Text>
+              probando
+            </Text>
+          </View>
+          <TouchableOpacity
+            style={styles.boton}>
+            <Text style={styles.texto}>
+              Ver mecanico
+            </Text>
+          </TouchableOpacity>
         </View>
+        
 
-        <View style={styles.caja_texto}>
-          <Text>
-            probando
-          </Text>
-        </View>
-
-        <View style={styles.caja_texto}>
-          <Text>
-            probando
-          </Text>
-        </View>
-
-        <View style={styles.caja_texto}>
-          <Text>
-            probando
-          </Text>
-        </View>
-
-        <View style={styles.caja_texto}>
-          <Text>
-            probando
-          </Text>
-        </View>
-
+        
 
       </View>
     </View>
@@ -74,6 +53,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#D6D5C9',
     width: 500,
     height: 1000,
+    
   },
   container: {
     marginLeft: 'auto',
@@ -81,7 +61,7 @@ const styles = StyleSheet.create({
   },
   caja_texto: {
     padding: 10,
-    width: 270,
+    width: 350,
     height: 100,
     borderWidth: 1.5,
     borderRadius: 10,
@@ -90,21 +70,42 @@ const styles = StyleSheet.create({
     color: '#0A100D',
     textAlign: 'center',
     marginTop: 10,
-
+  },
+  texto:{
+    color:'#D6D5C9',
+    textAlign: 'center',
   },
   boton:{
     marginVertical:10,
-    width: 150,
     borderRadius: 10,
-  },
-  boton_container:{
-    width: 60,
-    borderRadius: 10,
-    paddingTop: 150,
-    paddingLeft: 10,
-    marginLeft:50,
+    backgroundColor: '#A22C29',
+    padding: 10,
+    width: 350,
+    height: 50,
+
 
   },
+  boton_menu:{
+    marginVertical:10,
+    borderRadius: 10,
+    padding: 10,
+    marginTop: 125,
+    marginLeft: 50,
+    width: 60,
+    height: 60,
+    borderWidth: 1,
+    color: '#0A100D'
+
+  },
+  boton_imagen:{
+    width:37,
+    height:37,
+
+  },
+
 
 });
+
+
+
 
