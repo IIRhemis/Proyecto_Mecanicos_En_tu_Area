@@ -1,7 +1,7 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image, TextInput,Button,Alert } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput,Button,Alert, SafeAreaView, TouchableOpacity } from 'react-native';
 
-const Imagen = require('../image/Mecanico.jpg');
+
 
 export const LoginScreen = () => {
 
@@ -10,11 +10,11 @@ export const LoginScreen = () => {
   const [contraseña, onChangeContraseña] = React.useState("");
 
   return (
-    <View style={styles.container}>
-      <View style={styles.imageContainer}>
+    <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.imageContainer}>
         <Image source={PlaceholderImage} style={styles.image} />
 
-        <View style={styles.containerInput}>
+        <SafeAreaView style={styles.containerInput}>
 
           <TextInput
             style={styles.input}
@@ -28,23 +28,46 @@ export const LoginScreen = () => {
             placeholder="Contraseña"
             value={contraseña}
           />
-        </View>
-        <View style={styles.btnContainer} >
+        </SafeAreaView>
+
+        <SafeAreaView>
+          <TouchableOpacity
+          style={styles.btnContainer}
+          >
+            <Text
+            style={styles.btnText}>
+              Ingresar
+            </Text>
+          </TouchableOpacity>
+        </SafeAreaView>
+        
+        <SafeAreaView>
+          <TouchableOpacity
+          style={styles.btnContainer}
+          >
+            <Text
+            style={styles.btnText}>
+              Registrarse
+            </Text>
+          </TouchableOpacity>
+        </SafeAreaView>
+
+        {/* <SafeAreaView style={styles.btnContainer} >
         <Button
           color={'#A22C29'}
           title='Ingresar'
           onPress={() => Alert.alert('Btn de Ingresar')}
-          />
-        </View>
-        <View style={styles.btnContainer} >
+        />
+        </SafeAreaView>
+        <SafeAreaView style={styles.btnContainer} >
         <Button
           color={'#A22C29'}
           title='Registrarse'
           onPress={() => Alert.alert('Btn de Registrarse')}
-          />
-        </View>
-      </View>
-    </View>
+        />
+        </SafeAreaView> */}
+      </SafeAreaView>
+    </SafeAreaView>
   )
 }
 
@@ -60,24 +83,37 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 210
   },
-  containerInput:{
-    paddingTop:50,
-    paddingLeft:50,
-    // paddingBottom: 450,
-  },
   btnContainer:{
-    padding:20,
+    marginTop:15,
+    paddingVertical:15,
+    backgroundColor:'#A22C29',
+    alignSelf:'center',
+    width:'90%',
+    borderRadius:20,
+    maxWidth:'100%'
+    
+  },
+  btnText:{
+    textAlign:'center',
+    color:'#D6D5C9',
+    fontSize:30,
   },
   image: {
     // width: 320,
     // height: 440,
   },
+  containerInput:{
+    paddingTop:50,
+    paddingLeft:15,
+    // paddingBottom: 450,
+  },
   input: {
-    width: 200,
-    height: 44,
+    width: 270,
     padding: 10,
-    borderWidth: 1,
-    borderColor: 'black',
+    borderWidth: 1.5,
+    borderColor: '#000',
     marginBottom: 10,
+    fontSize:25,
+    // textAlign:'center',
   },
 });
