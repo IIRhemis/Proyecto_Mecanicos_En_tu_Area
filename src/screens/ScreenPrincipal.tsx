@@ -9,15 +9,17 @@ function ContainerExample(){
     };
     
     return (
-        <View>
-            <Image
-                style={{ width: 350, height: 200, marginBottom: 15 }}
-                source={require("./assets/mecanico1.png")}
-            />
-            <Button style={styles.button} onClick={handleClick} title="Ver Mecanicos"></Button>
-            <Button onClick={handleClick} title="Hacer Consulta"></Button>
-            <Button onClick={handleClick} title="¿Estás solo? Encuentra Mecánicos en tu área!"></Button>
-        </View>
+        <View style={styles.container}>
+                <Image
+                    style={{ width: 350, height: 200, marginBottom: 15 }}
+                    source={require("./assets/mecanico1.png")}
+                />
+                <View style={styles.btnContainer}>
+                <Button color={'#A22C29'} onClick={handleClick} title="Ver Mecanicos"></Button>
+                <Button color={'#A22C29'} onClick={handleClick} title="Hacer Consulta"></Button>
+                <Button color={'#A22C29'} onClick={handleClick} title="¿Estás solo? Encuentra Mecánicos en tu área!"></Button>
+                </View>    
+            </View>
     );
 }
 
@@ -28,10 +30,13 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor: '#D6D5C9',
     },
-    button: {
-        backgroundColor: 'red',
-        fontSize: 24,
-        padding: 10,
+    imageContainer: {
+        flex: 1,
+    paddingTop: 210,
+    },
+    btnContainer:{
+        padding:20,
     },
 });
