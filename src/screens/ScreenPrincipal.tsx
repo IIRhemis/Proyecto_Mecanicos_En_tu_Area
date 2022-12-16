@@ -1,5 +1,5 @@
-import { StatusBar } from "expo-status-bar";
-import CSS from 'csstype';
+//import { StatusBar } from "expo-status-bar";
+//import CSS from 'csstype';
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button,SafeAreaView} from 'react-native';
 
@@ -24,12 +24,6 @@ const ContainerExample = () =>(
                     title="Ver Mecanicos"
                     color={'#A22C29'} 
                     onPress={handleClick} 
-                />
-                <Separator></Separator>
-                <Button 
-                    color={'#A22C29'} 
-                    onPress={handleClick}  
-                    title="Hacer Consulta"
                 />
                 <Separator></Separator>
                 <Button 
