@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, TextInput,Button,Alert, SafeAreaView, To
 
 
 
-export const LoginScreen = (props : any) => {
+export default function LoginScreen() {
 
   const PlaceholderImage = require('../assets/images/Logo.png');
   const [usuario, onChangeUsuario] = React.useState("");
