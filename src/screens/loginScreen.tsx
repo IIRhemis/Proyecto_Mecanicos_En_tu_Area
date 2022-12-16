@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, TextInput,Button,Alert, SafeAreaView, To
 
 
 
-export const LoginScreen = () => {
+export const LoginScreen = (props : any) => {
 
   const PlaceholderImage = require('../assets/images/Logo.png');
   const [usuario, onChangeUsuario] = React.useState("");
@@ -18,12 +18,15 @@ export const LoginScreen = () => {
 
           <TextInput
             style={styles.input}
+            keyboardType='email-address'
             onChangeText={onChangeUsuario}
             placeholder="Usuario"
             value={usuario}
           />
           <TextInput
             style={styles.input}
+            keyboardType='default'
+            secureTextEntry
             onChangeText={onChangeContraseña}
             placeholder="Contraseña"
             value={contraseña}
@@ -51,21 +54,17 @@ export const LoginScreen = () => {
             </Text>
           </TouchableOpacity>
         </SafeAreaView>
-
-        {/* <SafeAreaView style={styles.btnContainer} >
-        <Button
-          color={'#A22C29'}
-          title='Ingresar'
-          onPress={() => Alert.alert('Btn de Ingresar')}
-        />
+        <SafeAreaView>
+          <TouchableOpacity
+          style={styles.btnContainer2}
+          >
+            <Text
+            style={styles.btnText2}>
+              Registrarse con Google
+            </Text>
+          </TouchableOpacity>
         </SafeAreaView>
-        <SafeAreaView style={styles.btnContainer} >
-        <Button
-          color={'#A22C29'}
-          title='Registrarse'
-          onPress={() => Alert.alert('Btn de Registrarse')}
-        />
-        </SafeAreaView> */}
+
       </SafeAreaView>
     </SafeAreaView>
   )
@@ -73,15 +72,19 @@ export const LoginScreen = () => {
 
 
 const styles = StyleSheet.create({
-
+  
+  imageContainer: {
+    flex: 1,
+    paddingTop: 210
+  },
+  image: {
+    // width: 320,
+    // height: 440,
+  },
   container: {
     flex: 1,
     alignItems: 'center',
     backgroundColor: '#D6D5C9',
-  },
-  imageContainer: {
-    flex: 1,
-    paddingTop: 210
   },
   btnContainer:{
     marginTop:15,
@@ -90,30 +93,45 @@ const styles = StyleSheet.create({
     alignSelf:'center',
     width:'90%',
     borderRadius:20,
-    maxWidth:'100%'
-    
+  },
+  btnContainer2:{
+    backgroundColor: '#D6D5C9',
+    borderColor: '#D6D5C9',
+    color:'#A22C29',
+    width: 280,
+    borderWidth: 2,
+    marginBottom: 20,
+    borderRadius: 60,
+    marginTop:15,
+    alignSelf:'center',
+    // textDecorationLine: 'underline',
+    // paddingVertical:15,
+    // width:'90%',
+    // borderRadius:20,
   },
   btnText:{
     textAlign:'center',
     color:'#D6D5C9',
-    fontSize:30,
+    fontSize:20,
   },
-  image: {
-    // width: 320,
-    // height: 440,
+  btnText2:{
+    textAlign:'center',
+    color:'#A22C29',
+    fontSize:20,
   },
   containerInput:{
-    paddingTop:50,
-    paddingLeft:15,
-    // paddingBottom: 450,
+    alignItems:'center',
+    paddingTop: 80,
+    paddingBottom:20,
   },
   input: {
-    width: 270,
+    width: "100%",
     padding: 10,
     borderWidth: 1.5,
-    borderColor: '#000',
+    borderColor: '#D6D5C9',
+    borderBottomColor:'#000',
     marginBottom: 10,
-    fontSize:25,
+    fontSize:20,
     // textAlign:'center',
   },
 });
