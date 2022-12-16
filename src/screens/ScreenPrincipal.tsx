@@ -1,15 +1,18 @@
 //import { StatusBar } from "expo-status-bar";
 //import CSS from 'csstype';
 import React from 'react';
-import { StyleSheet, Text, View, Image, Button,SafeAreaView} from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity,SafeAreaView} from 'react-native';
+import { createStackNavigator } from 'react-navigation';
+import { InicioScreen } from './InicioScreen';
 
 const Separator = () => (
     <View style={styles.separator} />
 );
 
 const handleClick = () => {
-    // Add code to handle the click event here
-};
+    // Cambiamos la vista de la aplicación utilizando el componente StackNavigator
+    
+}
 
 const ContainerExample = () =>(
     <SafeAreaView style={styles.container}>
@@ -20,17 +23,28 @@ const ContainerExample = () =>(
                 />
         </View>
         <View >
-                <Button 
-                    title="Ver Mecanicos"
-                    color={'#A22C29'} 
+                <TouchableOpacity 
+                    style={styles.btnContainer}
                     onPress={handleClick} 
-                />
+                >
+                    <Text style={styles.fixToText}>
+                        Ver Mecanicos
+                    </Text>
+                </TouchableOpacity>
+
                 <Separator></Separator>
-                <Button 
-                    color={'#A22C29'} 
+
+                <TouchableOpacity 
+                    style={styles.btnContainer}
                     onPress={handleClick}  
-                    title="¿Estás solo? Encuentra Mecánicos en tu área!"
-                />  
+                >
+                    <Text style={styles.fixToText}>
+                        ¿Estás solo? 
+                    </Text>
+                    <Text style={styles.fixToText}>
+                    Encuentra Mecánicos en tu área!
+                    </Text>
+                </TouchableOpacity>
             
         </View>
     </SafeAreaView>
@@ -46,7 +60,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#D6D5C9',
     },
     btnContainer:{
-        padding:20,
+        width: 360, height: 100,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#A22C29',
     },
     separator: {
         marginVertical: 8,
@@ -55,7 +72,7 @@ const styles = StyleSheet.create({
     },
     fixToText: {
         display: 'flex',
-        justifyContent: 'flex-start',
-        marginBottom: 15,
+        fontSize:20,
+        color:'#fff',
     },
 });
