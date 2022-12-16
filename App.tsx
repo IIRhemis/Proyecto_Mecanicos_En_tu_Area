@@ -4,11 +4,11 @@ import { MapScreen } from './src/screens/MapScreen';
 
 export default function App() {
   return (
-    // <View style={styles.container}>
-    //   <Text>K pazaaaaaaa ijos del piko</Text>
-    //   <StatusBar style="auto" />
-    // </View>
-    <MapScreen/>
+
+    <View style={styles.container}>
+      <Text>Hola React!</Text>
+      <StatusBar style="auto" />
+    </View>
   );
 }
 
