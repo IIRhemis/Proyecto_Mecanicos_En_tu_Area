@@ -2,7 +2,6 @@ import React from 'react'
 import { StyleSheet, Text, View, Image, TextInput,Button,Alert, SafeAreaView, TouchableOpacity } from 'react-native';
 
 
-
 export default function LoginScreen() {
 
   const PlaceholderImage = require('../assets/images/Logo.png');
@@ -19,17 +18,14 @@ export default function LoginScreen() {
           <TextInput
             style={styles.input}
             keyboardType='email-address'
-            onChangeText={onChangeUsuario}
-            placeholder="Usuario"
-            value={usuario}
+            onChangeText={(text)=> onChangeUsuario(text)}
+            placeholder="Usuario@example.com"      
           />
           <TextInput
             style={styles.input}
-            keyboardType='default'
             secureTextEntry
-            onChangeText={onChangeContraseña}
-            placeholder="Contraseña"
-            value={contraseña}
+            onChangeText={(text)=> onChangeContraseña(text)}
+            placeholder="Contraseña"            
           />
         </SafeAreaView>
 
