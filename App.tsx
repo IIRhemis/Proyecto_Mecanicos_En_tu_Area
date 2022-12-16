@@ -5,8 +5,9 @@ import { LoginScreen } from './src/screens/loginScreen';
 
 export default function App() {
   return (
-    <View style={styles.containerlogin}>
-      <LoginScreen/>
+    <View style={styles.container}>
+      <Text>Hola React!</Text>
+      <StatusBar style="auto" />
     </View>
   );
 }
