@@ -5,9 +5,7 @@ import { StyleSheet, View } from 'react-native';
 import MapViewDirections from 'react-native-maps-directions';
 import credentials from '../../credentials';
 
-
 export const MapComponent = () =>{
-
     const  [Origin, SetOrigin] = React.useState({
       latitud: -33.450648, 
       longitud: -70.674320
