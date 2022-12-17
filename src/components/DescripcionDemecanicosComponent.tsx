@@ -43,23 +43,108 @@ export const DescripcionDemecanicosComponent = () => {
   return (
     
     <View style={styles.container}>
-    <View style={styles.caja_texto}>
-      <Text style={styles.fuente}> {/*TEXTO DE NOMBRE*/}
-        Mecanico 1
-      </Text>
-
-      <Text style={styles.fuente}> {/*TEXTO DE DESCRIPCION*/}
-        Mecanicos a domicilio
-      </Text>
-
-      <Text style={styles.fuente}> {/*TEXTO DE DIRECCION*/}
-        Calle 123
-      </Text>
-
-      <Text style={styles.fuente}> {/*TEXTO DE CONTACTO*/}
-        +123456789
-      </Text>
-    </View>
+      <View style={styles.caja_texto}>
+        <Text style={styles.fuente}> {/*TEXTO DE NOMBRE*/}
+          Mecanico 1
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE DESCRIPCION*/}
+          Mecanicos a domicilio
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE DIRECCION*/}
+        Brown Sur 777-983, Ñuñoa, Región Metropolitana
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE CONTACTO*/}
+          +123456789
+        </Text>
+      </View>
+      <View style={styles.caja_texto}>
+        <Text style={styles.fuente}> {/*TEXTO DE NOMBRE*/}
+          Mecanico 2
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE DESCRIPCION*/}
+          Mecanicos a domicilio
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE DIRECCION*/}
+        Av. Grecia 2734, 7750476 Ñuñoa, Región Metropolitana
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE CONTACTO*/}
+          +123456789
+        </Text>
+      </View>
+      <View style={styles.caja_texto}>
+        <Text style={styles.fuente}> {/*TEXTO DE NOMBRE*/}
+          Mecanico 3
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE DESCRIPCION*/}
+          Mecanicos a domicilio
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE DIRECCION*/}
+        Alcalde Eduardo Castillo Velasco 1818, Ñuñoa, Región Metropolitana
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE CONTACTO*/}
+          +123456789
+        </Text>
+      </View>
+      <View style={styles.caja_texto}>
+        <Text style={styles.fuente}> {/*TEXTO DE NOMBRE*/}
+          Mecanico 4
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE DESCRIPCION*/}
+          Mecanicos a domicilio
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE DIRECCION*/}
+        Puente Alto, Región Metropolitana
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE CONTACTO*/}
+          +123456789
+        </Text>
+      </View>
+      <View style={styles.caja_texto}>
+        <Text style={styles.fuente}> {/*TEXTO DE NOMBRE*/}
+          Mecanico 5
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE DESCRIPCION*/}
+          Mecanicos a domicilio
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE DIRECCION*/}
+        Av. Pdte. Eduardo Frei Montalva 839, 8390704 Santiago, Independencia, Región Metropolitana
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE CONTACTO*/}
+          +123456789
+        </Text>
+      </View>
+      <View style={styles.caja_texto}>
+        <Text style={styles.fuente}> {/*TEXTO DE NOMBRE*/}
+          Mecanico 6
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE DESCRIPCION*/}
+          Mecanicos a domicilio
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE DIRECCION*/}
+        Gran Av. José Miguel Carrera 12036, 8010236 Santiago, El Bosque, Región Metropolitana
+        </Text>
+  
+        <Text style={styles.fuente}> {/*TEXTO DE CONTACTO*/}
+          +123456789
+        </Text>
+      </View>
     {/* <TouchableOpacity
       style={styles.boton}>
       <Text style={styles.texto}>
@@ -85,7 +170,7 @@ const styles = StyleSheet.create({
   caja_texto: {
     padding: 10,
     width: 350,
-    height: 180,
+    height: 230,
     borderWidth: 1.5,
     borderRadius: 10,
     borderColor: '#0A100D',
