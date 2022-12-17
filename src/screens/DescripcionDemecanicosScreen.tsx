@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet,Text,View,Image,Button,Alert, Touchable, TouchableOpacity,SafeAreaView, ScrollView, StatusBar } from "react-native";
-
+import { DescripcionDemecanicosComponent } from '../components/DescripcionDemecanicosComponent';
 
 
 const image_menu = require('../assets/Atras-negro.png');
@@ -29,23 +29,7 @@ export const DescripcionDemecanicosScreen = () => {
 
 
 
-            <View style={styles.container}>
-              <View style={styles.caja_texto}>
-                <Text>
-                  probando
-                </Text>
-              </View>
-              <TouchableOpacity
-                style={styles.boton}>
-                <Text style={styles.texto}>
-                  Ver mecanico
-
-
-
-                  
-                </Text>
-              </TouchableOpacity>
-            </View>
+            <DescripcionDemecanicosComponent/>
 
 
 
