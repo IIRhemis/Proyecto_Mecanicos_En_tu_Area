@@ -37,9 +37,6 @@ const ContainerExample = ({ navigation }) =>(
                     onPress={() => navigation.navigate('Maps')}  
                 >
                     <Text style={styles.fixToText}>
-                        ¿Estás solo? 
-                    </Text>
-                    <Text style={styles.fixToText}>
                     Encuentra Mecánicos en tu área!
                     </Text>
                 </TouchableOpacity>

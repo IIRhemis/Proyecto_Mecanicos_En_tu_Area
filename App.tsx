@@ -1,27 +1,30 @@
 
-import { StatusBar } from 'expo-status-bar';
-
 import * as React from 'react';
-import { StyleSheet, Text, View, Image, TextInput,Button,Alert, SafeAreaView, TouchableOpacity, StatusBar} from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { StyleSheet, Text, View, Image, TextInput,Button,Alert, SafeAreaView, TouchableOpacity} from 'react-native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
 import  ContainerExample  from './src/screens/ScreenPrincipal';
 import InicioScreen from './src/screens/InicioScreen';
 import DescripcionDemecanicosScreen from './src/screens/DescripcionDemecanicosScreen';
 import MapScreen from './src/screens/MapScreen';
 
-const Stack = createNativeStackNavigator();
 
 import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword } from '@firebase/auth';
 import {initializeApp} from 'firebase/app';
 import {firebaseConfig} from './src/firebase/firebaseConfig';
+import ScreenPrincipal from './src/screens/ScreenPrincipal';
+
+
+const Stack = createNativeStackNavigator();
+
 
 function Login() {
 
   const PlaceholderImage = require('./src/assets/images/Logo.png');
   const [usuario, onChangeUsuario] = React.useState("");
   const [contraseña, onChangeContraseña] = React.useState("");
+  
+  const navigation: any= useNavigation();
 
 
   const app = initializeApp(firebaseConfig);
@@ -33,6 +36,7 @@ function Login() {
       console.log('Se ha creado la cuenta');
       const user = userCredential.user;
       console.log(user);
+      navigation.navigate('Home');
     })
     .catch(error=>{
       console.log(error);
@@ -41,8 +45,10 @@ function Login() {
   }
   const hadleSignIn = ()=>{
     signInWithEmailAndPassword(auth, usuario, contraseña)
-    .then(()=>{
+    .then((userCredential)=>{
+      const user = userCredential.user;
       console.log('Se ha creado la cuenta');
+      navigation.navigate('Home');
     })
     .catch(error=>{
       console.log(error);
@@ -56,17 +62,6 @@ function Login() {
         <Image source={PlaceholderImage} style={styles.image} />
 
         <SafeAreaView style={styles.containerInput}>
-
-
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={ContainerExample} />
-        <Stack.Screen name="Details" component={DescripcionDemecanicosScreen} />
-        <Stack.Screen name="Maps" component={MapScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-
-    
           <TextInput
             style={styles.input}
             keyboardType='email-address'
@@ -110,26 +105,30 @@ function Login() {
   )
 }
 
+const Stacks = createNativeStackNavigator();
 
 export default function App() {
+
   return (
-    
-    <Login/>
-    // <View style={styles.container}>
-    //   <Text>Hola React!</Text>
-    //   <StatusBar />
-    // </View>
+    <NavigationContainer>
+        <Stack.Navigator initialRouteName='Login'>
+          <Stack.Screen name= "Login" component={Login}/>|
+          <Stack.Screen name="Home" component={ScreenPrincipal} />
+          <Stack.Screen name="Details" component={DescripcionDemecanicosScreen} />
+          <Stack.Screen name="Maps" component={MapScreen} />
+        </Stack.Navigator>
+    </NavigationContainer> 
   );
 }
 
 
 const styles = StyleSheet.create({
-  // container: {
-  //   flex: 1,
-  //   backgroundColor: '#D6D5C9',
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  // },
+  container: {
+    flex: 1,
+    backgroundColor: '#D6D5C9',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   
   imageContainer: {
     flex: 1,
@@ -139,11 +138,11 @@ const styles = StyleSheet.create({
     // width: 320,
     // height: 440,
   },
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    backgroundColor: '#D6D5C9',
-  },
+  // container: {
+  //   flex: 1,
+  //   alignItems: 'center',
+  //   backgroundColor: '#D6D5C9',
+  // },
   btnContainer:{
     marginTop:15,
     paddingVertical:15,
