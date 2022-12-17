@@ -3,18 +3,23 @@ import { StyleSheet, Text, View } from 'react-native';
 import { DescripcionDemecanicosScreen } from './src/screens/DescripcionDemecanicosScreen';
 
 
+
 export default function App() {
   return (
-    <View style={styles.container}>
-      <DescripcionDemecanicosScreen/>
-    </View>
+
+    <MapScreen/>
+    // <View style={styles.container}>
+    //   <Text>Hola React!</Text>
+    //   <StatusBar style="auto" />
+    // </View>
+
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#D6D5C9',
     alignItems: 'center',
     justifyContent: 'center',
   },
