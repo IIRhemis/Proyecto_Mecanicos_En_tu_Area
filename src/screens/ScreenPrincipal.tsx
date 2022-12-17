@@ -2,8 +2,6 @@
 //import CSS from 'csstype';
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity,SafeAreaView} from 'react-native';
-import { createStackNavigator } from 'react-navigation';
-import { InicioScreen } from './InicioScreen';
 
 const Separator = () => (
     <View style={styles.separator} />
@@ -14,7 +12,7 @@ const handleClick = () => {
     
 }
 
-const ContainerExample = () =>(
+const ContainerExample = ({ navigation }) =>(
     <SafeAreaView style={styles.container}>
         <View >
                 <Image
@@ -25,7 +23,7 @@ const ContainerExample = () =>(
         <View >
                 <TouchableOpacity 
                     style={styles.btnContainer}
-                    onPress={handleClick} 
+                    onPress={() => navigation.navigate('')} 
                 >
                     <Text style={styles.fixToText}>
                         Ver Mecanicos
@@ -36,7 +34,7 @@ const ContainerExample = () =>(
 
                 <TouchableOpacity 
                     style={styles.btnContainer}
-                    onPress={handleClick}  
+                    onPress={() => navigation.navigate('Inicio')}  
                 >
                     <Text style={styles.fixToText}>
                         ¿Estás solo? 

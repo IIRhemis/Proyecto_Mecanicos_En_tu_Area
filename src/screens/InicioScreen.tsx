@@ -1,10 +1,10 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, Button } from 'react-native'
 
-export const InicioScreen = () => {
+const InicioScreen = () => {
   return (
-    <View>
-        <Text>INICIO SCREEN</Text>
-    </View>
+        <Button title='regresando'></Button>
+    
   )
 }
+export default InicioScreen
