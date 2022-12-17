@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet,Text,View,Image,Button,Alert, Touchable, TouchableOpacity,SafeAreaView, ScrollView, StatusBar } from "react-native";
 
 
-export interface IMecanicos{
+interface IMecanicos{
   nombre: string;
   direccion: string;
   descripcion: string;
@@ -10,6 +10,34 @@ export interface IMecanicos{
   longitud ?: number;
   latitud ?: number;
 }
+
+export const mecanicos : IMecanicos[] = [
+  // {
+  //   latitud: -33.46356120668047,
+  //   longitud:  -70.59226111258074
+  // },
+  // {
+  //   latitud: -33.462925726716676,
+  //   longitud:  -70.60320452453522
+  // },
+  // {
+  //   latitud: -33.457161442651135,
+  //   longitud:  -70.61267808662751
+  // },
+  // {
+  //   latitud: -33.57190635744632,
+  //   longitud:  -70.59226111258074
+  // },
+  // {
+  //   latitud: -33.42038286788774,
+  //   longitud:  -70.67582163068988
+  // },
+  // {
+  //   latitud: -33.565452024323264,
+  //   longitud:  -70.68353591664416
+  // },
+
+]
 
 export const DescripcionDemecanicosComponent = () => {
   return (
