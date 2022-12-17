@@ -17,7 +17,7 @@ const ContainerExample = ({ navigation }) =>(
         <View >
                 <Image
                     style={{ width: 360, height: 200, margin:15, borderRadius: 10,}}
-                    source={require("./assets/mecanico1.png")}
+                    source={require("../assets/images/mecanico1.png")}
                 />
         </View>
         <View >
