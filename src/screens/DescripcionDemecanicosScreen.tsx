@@ -39,6 +39,10 @@ export const DescripcionDemecanicosScreen = () => {
                 style={styles.boton}>
                 <Text style={styles.texto}>
                   Ver mecanico
+
+
+
+                  
                 </Text>
               </TouchableOpacity>
             </View>
