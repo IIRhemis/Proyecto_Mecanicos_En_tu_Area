@@ -16,14 +16,14 @@ const ContainerExample = ({ navigation }) =>(
     <SafeAreaView style={styles.container}>
         <View >
                 <Image
-                    style={{ width: 360, height: 200, margin:15, }}
+                    style={{ width: 360, height: 200, margin:15, borderRadius: 10,}}
                     source={require("./assets/mecanico1.png")}
                 />
         </View>
         <View >
                 <TouchableOpacity 
                     style={styles.btnContainer}
-                    onPress={() => navigation.navigate('')} 
+                    onPress={() => navigation.navigate('Details')} 
                 >
                     <Text style={styles.fixToText}>
                         Ver Mecanicos
@@ -34,7 +34,7 @@ const ContainerExample = ({ navigation }) =>(
 
                 <TouchableOpacity 
                     style={styles.btnContainer}
-                    onPress={() => navigation.navigate('Inicio')}  
+                    onPress={() => navigation.navigate('Maps')}  
                 >
                     <Text style={styles.fixToText}>
                         ¿Estás solo? 
@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     },
     btnContainer:{
         width: 360, height: 100,
+        borderRadius: 10,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#A22C29',

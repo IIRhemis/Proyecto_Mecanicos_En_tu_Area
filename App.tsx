@@ -6,12 +6,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import  ContainerExample  from './src/screens/ScreenPrincipal';
 import InicioScreen from './src/screens/InicioScreen';
+import DescripcionDemecanicosScreen from './src/screens/DescripcionDemecanicosScreen';
+import MapScreen from './src/screens/MapScreen';
 
 const Stack = createNativeStackNavigator();
-
-import { DescripcionDemecanicosScreen } from './src/screens/DescripcionDemecanicosScreen';
-
-
 
 
 export default function App() {
@@ -20,11 +18,12 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={ContainerExample} />
-        <Stack.Screen name="Inicio" component={InicioScreen} />
+        <Stack.Screen name="Details" component={DescripcionDemecanicosScreen} />
+        <Stack.Screen name="Maps" component={MapScreen} />
       </Stack.Navigator>
     </NavigationContainer>
 
-    <MapScreen/>
+    
     
   );
 }

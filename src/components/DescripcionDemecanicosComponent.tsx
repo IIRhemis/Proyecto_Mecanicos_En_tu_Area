@@ -16,20 +16,20 @@ export const DescripcionDemecanicosComponent = () => {
     
     <View style={styles.container}>
     <View style={styles.caja_texto}>
-      <Text> {/*TEXTO DE NOMBRE*/}
-        mecanico 1
+      <Text style={styles.fuente}> {/*TEXTO DE NOMBRE*/}
+        Mecanico 1
       </Text>
 
-      <Text> {/*TEXTO DE DESCRIPCION*/}
-        mecanicos a domicilio
+      <Text style={styles.fuente}> {/*TEXTO DE DESCRIPCION*/}
+        Mecanicos a domicilio
       </Text>
 
-      <Text> {/*TEXTO DE DIRECCION*/}
-        calle 123
+      <Text style={styles.fuente}> {/*TEXTO DE DIRECCION*/}
+        Calle 123
       </Text>
 
-      <Text> {/*TEXTO DE CONTACTO*/}
-        123456789
+      <Text style={styles.fuente}> {/*TEXTO DE CONTACTO*/}
+        +123456789
       </Text>
     </View>
     <TouchableOpacity
@@ -68,8 +68,17 @@ const styles = StyleSheet.create({
   },
 
   texto:{
-    color:'#D6D5C9',
+    display: 'flex',
     textAlign: 'center',
+    fontSize:20,
+    color:'#fff',
+  },
+
+  fuente:{
+    display: 'flex',
+    textAlign: 'center',
+    fontSize:20,
+    color:'#000',
   },
 
   boton:{

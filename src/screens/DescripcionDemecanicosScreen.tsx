@@ -2,26 +2,14 @@ import React from 'react'
 import { StyleSheet,Text,View,Image,Button,Alert, Touchable, TouchableOpacity,SafeAreaView, ScrollView, StatusBar } from "react-native";
 import { DescripcionDemecanicosComponent } from '../components/DescripcionDemecanicosComponent';
 
-
 const image_menu = require('../assets/Atras-negro.png');
 
-
-
-
-
-
-
-export const DescripcionDemecanicosScreen = () => {
+const DescripcionDemecanicosScreen = () => {
   
   return (
     
     <View style={styles.fondo}>
 
-      <TouchableOpacity style={styles.boton_menu}>
-        <Image
-        source={image_menu}
-        style={styles.boton_imagen}/>
-      </TouchableOpacity>
 
       <SafeAreaView style={styles.safeArea}>
         <ScrollView>
@@ -45,13 +33,15 @@ export const DescripcionDemecanicosScreen = () => {
   )
 }
 
+export default DescripcionDemecanicosScreen
+
 const styles = StyleSheet.create({
 
   fondo: {
-    position: 'absolute',
-    backgroundColor: '#D6D5C9',
-    width: 500,
-    height: 1000,
+    flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#D6D5C9',
   },
 
   safeArea:{
@@ -106,6 +96,11 @@ const styles = StyleSheet.create({
     width:37,
     height:37,
   },
+  fixToText: {
+        display: 'flex',
+        fontSize:20,
+        color:'#fff',
+    },
 });
 
 
