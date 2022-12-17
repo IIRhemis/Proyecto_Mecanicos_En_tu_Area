@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+
     "@react-native-async-storage/async-storage": "^1.17.11",
     "@react-native-firebase/app": "^16.4.6",
     "@react-native-firebase/firestore": "^16.5.0",
@@ -18,6 +19,7 @@
     "bootstrap": "^5.2.3",
     "button": "^1.1.1",
     "expo": "~47.0.8",
+    "@firebase/auth": "^0.21.0",
     "expo-location": "^15.0.1",
     "expo-status-bar": "~1.4.2",
     "firebase": "^9.15.0",
