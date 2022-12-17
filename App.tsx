@@ -1,5 +1,18 @@
-import React from 'react'
-import { StyleSheet, Text, View, Image, TextInput,Button,Alert, SafeAreaView, TouchableOpacity, StatusBar } from 'react-native';
+
+import { StatusBar } from 'expo-status-bar';
+
+import * as React from 'react';
+import { StyleSheet, Text, View, Image, TextInput,Button,Alert, SafeAreaView, TouchableOpacity, StatusBar} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import  ContainerExample  from './src/screens/ScreenPrincipal';
+import InicioScreen from './src/screens/InicioScreen';
+import DescripcionDemecanicosScreen from './src/screens/DescripcionDemecanicosScreen';
+import MapScreen from './src/screens/MapScreen';
+
+const Stack = createNativeStackNavigator();
+
 import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword } from '@firebase/auth';
 import {initializeApp} from 'firebase/app';
 import {firebaseConfig} from './src/firebase/firebaseConfig';
@@ -37,7 +50,6 @@ function Login() {
     })
   }
 
-
   return (
     <SafeAreaView style={styles.container}>
       <SafeAreaView style={styles.imageContainer}>
@@ -45,6 +57,16 @@ function Login() {
 
         <SafeAreaView style={styles.containerInput}>
 
+
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={ContainerExample} />
+        <Stack.Screen name="Details" component={DescripcionDemecanicosScreen} />
+        <Stack.Screen name="Maps" component={MapScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+
+    
           <TextInput
             style={styles.input}
             keyboardType='email-address'
@@ -99,6 +121,7 @@ export default function App() {
     // </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   // container: {
