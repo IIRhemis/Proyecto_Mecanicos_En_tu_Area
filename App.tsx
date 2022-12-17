@@ -1,8 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { DescripcionDemecanicosScreen } from './src/screens/DescripcionDemecanicosScreen';
-
-
+import { MapScreen } from './src/screens/MapScreen';
 
 export default function App() {
   return (

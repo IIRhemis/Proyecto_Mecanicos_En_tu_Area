@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet,Text,View,Image,Button,Alert, Touchable, TouchableOpacity,SafeAreaView, ScrollView, StatusBar } from "react-native";
 
 
-interface IMecanicos{
+export interface IMecanicos{
   nombre: string;
   direccion: string;
   descripcion: string;
