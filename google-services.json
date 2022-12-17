@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "475922786364",
+    "project_id": "proyecto-final-c9351",
+    "storage_bucket": "proyecto-final-c9351.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475922786364:android:5cd283a78f876a52d47b39",
+        "android_client_info": {
+          "package_name": "com.utem.mecanicos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475922786364-j2qla3dlkj13nedpvfnbhsue67cc7ng0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmch7F38B2cy1ZYjokdEx4HUwrLDh4rjc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475922786364-j2qla3dlkj13nedpvfnbhsue67cc7ng0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

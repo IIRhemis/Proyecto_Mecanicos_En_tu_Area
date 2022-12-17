@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Text, View, Button } from 'react-native'
 
 const InicioScreen = () => {
@@ -8,3 +9,4 @@ const InicioScreen = () => {
   )
 }
 export default InicioScreen
+

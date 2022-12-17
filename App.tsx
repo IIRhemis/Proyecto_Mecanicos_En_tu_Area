@@ -1,3 +1,4 @@
+
 import * as React from 'react';
 import { Button, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -8,15 +9,23 @@ import InicioScreen from './src/screens/InicioScreen';
 
 const Stack = createNativeStackNavigator();
 
+import { DescripcionDemecanicosScreen } from './src/screens/DescripcionDemecanicosScreen';
+
+
+
 
 export default function App() {
   return (
+
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={ContainerExample} />
         <Stack.Screen name="Inicio" component={InicioScreen} />
       </Stack.Navigator>
     </NavigationContainer>
+
+    <MapScreen/>
+    
   );
 }
 
@@ -24,7 +33,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#D6D5C9',
     alignItems: 'center',
     justifyContent: 'center',
   },
