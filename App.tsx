@@ -1,14 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { DescripcionDemecanicosScreen } from './src/screens/DescripcionDemecanicosScreen';
+
 
 
 export default function App() {
   return (
+
     <MapScreen/>
     // <View style={styles.container}>
     //   <Text>Hola React!</Text>
     //   <StatusBar style="auto" />
     // </View>
+
   );
 }
 
