@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { MapComponent } from "../components/MapComponent";
 
-export const MapScreen = () =>{
+const MapScreen = () =>{
     return (
         <View style= {styles.container}>
             <MapComponent/>
@@ -15,6 +15,7 @@ export const MapScreen = () =>{
     
 }
 
+export default MapScreen
 
 const styles = StyleSheet.create({
     container: {
