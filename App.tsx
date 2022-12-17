@@ -1,8 +1,4 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { DescripcionDemecanicosScreen } from './src/screens/DescripcionDemecanicosScreen';
-import { MapScreen } from './src/screens/MapScreen';
-
 
 import * as React from 'react';
 import { Button, StyleSheet } from 'react-native';

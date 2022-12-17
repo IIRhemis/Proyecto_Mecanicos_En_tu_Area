@@ -77,7 +77,7 @@ export const MapComponent = () =>{
       
           <Marker  
             coordinate={{latitude: Origin.latitud,longitude: Origin.longitud}}
-            
+            pinColor = {'green'}
           />
           <Marker  
             coordinate={{latitude: -33.462925726716676,longitude: -70.60320452453522}}

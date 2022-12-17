@@ -4,12 +4,14 @@ import { Text, View, Button } from 'react-native'
 
 const InicioScreen = () => {
   return (
-    
-    <View>
-        <Text>INICIO SCREEN</Text>
-    </View>
+    <>
+      <View>
+          <Text>INICIO SCREEN</Text>
+      </View>
 
-        <Button title='regresando'></Button>
+      <Button title='regresando'></Button>
+  
+    </>
     
 
   )

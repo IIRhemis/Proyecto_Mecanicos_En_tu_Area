@@ -60,12 +60,12 @@ export const DescripcionDemecanicosComponent = () => {
         +123456789
       </Text>
     </View>
-    <TouchableOpacity
+    {/* <TouchableOpacity
       style={styles.boton}>
       <Text style={styles.texto}>
         Ver mecanico
       </Text>
-    </TouchableOpacity>
+    </TouchableOpacity> */}
     </View>
 
 
